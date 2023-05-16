@@ -9,12 +9,6 @@ This repository contains the code of first light weight full stack application t
 
 if you'd like to see a video demonstration of this project, please click the following link: https://www.youtube.com/watch?v=Y6ATg32pSU0&t=9s
 
-to run this site on your machine, navigate to both folders within the main repository( rest and ui) and run the following commands:
-npm install
-npm start
-
-keep in mind that the rest api is missing the .env file for securities sake. you will need to supply your own .env file with a connect string and port #.
-
  I hope you like my work!
 
  feel free to reach out if you have questions:
@@ -23,3 +17,9 @@ keep in mind that the rest api is missing the .env file for securities sake. you
  website: www.samisyed.dev
 
 # instructions for running
+
+to run this site on your machine, navigate to both folders within the main repository( rest and ui) and run the following commands:
+npm install
+npm start
+
+keep in mind that the rest api is missing the .env file for securities sake. you will need to supply your own .env file with a connect string and port #.
