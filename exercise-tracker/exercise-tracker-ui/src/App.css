@@ -1,0 +1,201 @@
+/*   ----- Imports  -----  */    
+/* font -family: 'Andika; */              
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* normalize */
+@import '../node_modules/modern-normalize/modern-normalize.css';
+          /* npm install modern-normalize 
+            Resets elements for browser consistency.  
+            http://nicolasgallagher.com/about-normalize-css/ 
+          */
+/*   ----- Variables  -----  */
+:root {
+  --header-footer-color: rgb(254, 243, 199);
+  --font-color: #472009;
+  --font:'Andika', sans-serif, 'Courier New', Courier, monospace, Arial, Helvetica, sans-serif;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+  color: var(--font-color);
+  background-color: var(--header-footer-color);
+  font-family: var(--font);
+  font-size: 1.2rem;
+  margin:0px;
+  padding:0px;
+}
+
+/* ----- Anchors ----- Text links */
+a {
+  color:#8d4d03;
+  font-size: 1.2rem;
+  transition:font 0.5s ease;
+  height: auto;
+}
+a:hover {
+  color:#42330d;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+/* make the nav a flex container so that the links can grow smoothly */
+/* did not need to add a background color since the body has it */
+nav {
+  background-color: var(--header-footer-color);
+  text-align: center;
+  align-self: center;
+  display: flex;
+  justify-content:flex-end;
+  gap: 30px;
+  margin-left: 50px;
+  margin-right: 40px;
+  padding: 20px;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+/* add transition to font for hover */
+nav a {
+  color:#8d4d03;
+  font-size: 1.2rem;
+  transition:font 0.5s ease;
+  height: auto;
+}
+/* expand font size to make clicking easier */
+nav a:hover {
+  color:#fbbf24;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  background-color: var(--header-footer-color);
+  padding:0px;
+  padding-left: 40px;
+  color: var(--font-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0px;
+}
+
+main {
+  background: url(../src/images/oscar-aguilar-elias-Ku8MDO-FcaY-unsplash.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-color: var(--header-footer-color);
+  grid-area: 2/1/3/3;
+  color: var(--font-color);
+  padding: 10px;
+  border:1px solid var(--header-footer-color);
+  box-shadow: inset 0 -10px 5px -5px var(--header-footer-color), 
+              inset 0 10px 5px -5px var(--header-footer-color);
+}         
+article {
+  padding:20px;
+  padding-left: 40px;
+}
+footer {
+  background-color: var(--header-footer-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  grid-area: 3/1/3/3;
+  font-size: 1.2rem ;
+  font-weight:500;
+  padding: 5px;
+  margin:0;
+}
+
+/*  -----  Typography  ----- */
+p {
+  padding: 5px;
+  margin: 0px;
+}
+header p {
+  padding: 0px;
+  margin:0px;
+}
+ol{
+  background-color: rgba(254, 243, 210, .65);
+  border-radius: 5px;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  min-width: 300px;
+}
+/*  ----- Table ----- */
+table {
+  background-color: rgba(254, 243, 210, .65);
+  border-collapse: separate;
+  padding: 15px;
+  margin: 15px;
+  border-spacing: 0 10px;
+}
+caption {
+  font-size: 1rem;
+}
+tr:nth-child(even) {
+  background-color: rgba(254, 243, 210, .7);
+}
+th {
+  text-align: left;
+}
+td {
+  padding: 10px 60px 10px 0px;
+  text-align: left;
+}
+/*  ----- Form ----- */
+form {
+  font-family: var(--font);
+  max-width: fit-content;
+  font-size: 1.3rem;
+  padding:10px;
+}
+fieldset {
+  background-color: rgba(254, 243, 210, .65);
+  font-family: var(--font);
+  border: 2px solid var(--font-color);
+  border-radius: 5px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fbbf24;
+  font-family: var(--font);
+  transition:font 0.5s ease;
+}
+button:hover {
+  background-color:#d97706;
+  font-size: 1.5rem;
+  transition:font 0.5s ease;
+}
+input {
+  font-family:var(--font);
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  transition:font 0.5s ease;
+
+}
+input:focus {
+  font-size: 2rem;
+  transition:font 0.5s ease;
+}
+select {
+  font-family:var(--font);
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  transition:font 0.5s ease;
+}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+/* give specific styling to the app so that it's contents fall into a grid and take up the screen*/
+.exercise-app {
+  display: grid;
+  grid-template: 1fr 5fr 50px / 1fr 1fr ;
+  height: 100vh;
+}
